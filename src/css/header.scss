@@ -1,0 +1,25 @@
+
+.header{
+  padding: 1.2rem 4rem;
+  color: #282c34;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: snow;
+  border-radius: 10px;
+  .header-title {
+    span {
+      font-size: 3rem;
+      display: flex;
+      align-items: center;
+      font-family: "Pacifico", cursive;
+    }
+  }
+  .header-menu {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}

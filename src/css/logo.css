@@ -1,0 +1,6 @@
+.Main-logo{
+    width: 82px;
+    height: 50px;
+    pointer-events: none;
+    flex:1;
+}

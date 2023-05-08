@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    margin-top: 20px;
+}
+
+.content {
+    display: flex;
+    height: 100vh;
+    .left {
+        margin-bottom: 5px;
+        font-size: 1.8rem;
+        font-weight: bold;
+        background-color: lightblue;
+        color: white;
+        flex: 1;
+        height: 100%;
+    }
+    .right {
+        margin-bottom: 5px;
+        font-size: 1.8rem;
+        font-weight: bold;
+        background-color: lightgreen;
+        color: white;
+        flex: 1;
+        height: 100%;
+    }
+}
