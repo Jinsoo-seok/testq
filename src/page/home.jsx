@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom";
-import "./css/home.scss";
+import "../css/home.scss";
 
 const HomeWrapper = styled.div`
   @keyframes smoothAppear {
@@ -91,21 +91,10 @@ const leftContent = styled.div`
 
 const Home = () => {
     return (
-    // <div style={{ display: "flex", width: "100%", height: "100vh"}}>
-    //     <Link to="/travel" style={
-    //         {flex: 1, backgroundColor: "lightblue"}
-    //     }>여행</Link>
-    //     <Link to="/metting" style={
-    //         {flex: 1, backgroundColor: "lightgreen"}
-    //     }>모임</Link>
-    // </div>
-
-    // <div className = "container">
         <div className="content">
             <Link to="/travel" className = "left">여행</Link>
-            <Link to="/metting" className = "right">모임</Link>
+            <Link to="/meeting" className = "right">모임</Link>
         </div>
-    // </div>
     )
 }
 
