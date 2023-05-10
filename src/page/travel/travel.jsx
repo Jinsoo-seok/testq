@@ -49,7 +49,7 @@ const Travel = () => {
         const { location1 } = filters;
         // const results = data.filter((item) => item.location.includes(location1));
         const results = data.filter((item) => (filters.location1 ? results.location.includes(filters.location1) : true));
-        // console.log(results);
+        console.log(results);
 
         // (filters.location1 ? result.location.includes(filters.location1) : true)
         // 필터값을 이용해서 검색결과를 찾고 setSearchResults에 결과를 저장합니다.
