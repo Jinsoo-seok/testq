@@ -6,28 +6,32 @@ import Travel from './page/travel/travel';
 import Meeting from './page/meeting/meeting';
 import { BrowserRouter as Router, Route, Switch, Routes } from "react-router-dom";
 import NotFound from './common/exception/NotFound';
+import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 
+const queryClient = new QueryClient();
 function App() {
   return (
-      <div className="App" >
-          <Router basename="/">
-                <Header />
-                  <Routes >
-                      {/* root */}
-                      <Route path="/" element={<Home />}></Route>
+      <QueryClientProvider client={queryClient}>
+          <div className="App" >
+              <Router basename="/">
+                    <Header />
+                      <Routes >
+                          {/* root */}
+                          <Route path="/" element={<Home />}></Route>
 
 
-                      {/* page */}
-                      <Route path="/travel" element={<Travel />}></Route>
-                      <Route path="/meeting" element={<Meeting />}></Route>
+                          {/* page */}
+                          <Route path="/travel" element={<Travel />}></Route>
+                          <Route path="/meeting" element={<Meeting />}></Route>
 
 
-                      {/* Exception */}
-                      <Route path="*" element={<NotFound />}></Route>
-                  </Routes>
+                          {/* Exception */}
+                          <Route path="*" element={<NotFound />}></Route>
+                      </Routes>
 
-          </Router>
-      </div>
+              </Router>
+          </div>
+      </QueryClientProvider>
   )
 }
 
