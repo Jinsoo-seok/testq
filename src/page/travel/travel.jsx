@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { AutoSizer, List } from "react-virtualized";
 import SubNavbar from "../../components/SubNavbar";
 import CitySelect from "../../components/common/CitySelect";
+import MbtiSelect from "../../components/common/mbtiSelect";
 
 const data = [
     {
@@ -78,41 +79,26 @@ const Travel = () => {
             <div>
                 <SubNavbar />
             </div>
-            <CitySelect />
-            <select>
-                <option value="">MBTI</option>
-                <option value="ISTJ">ISTJ</option>
-                <option value="ISFJ">ISFJ</option>
-                <option value="INFJ">INFJ</option>
-                <option value="INTJ">INTJ</option>
-                <option value="ISTP">ISTP</option>
-                <option value="ISFP">ISFP</option>
-                <option value="INFP">INFP</option>
-                <option value="INTP">INTP</option>
-                <option value="ESTP">ESTP</option>
-                <option value="ESFP">ESFP</option>
-                <option value="ENFP">ENFP</option>
-                <option value="ENTP">ENTP</option>
-                <option value="ESTJ">ESTJ</option>
-                <option value="ESFJ">ESFJ</option>
-                <option value="ENFJ">ENFJ</option>
-                <option value="ENTJ">ENTJ</option>
-            </select>
-            <button onClick={handleSearchClick}>검색</button>
+            <div style={{ border: '1px solid black', borderRadius: '10px' }}>
+                <CitySelect />
+                <MbtiSelect />
+                <button onClick={handleSearchClick}>검색</button>
 
 
-            <div>
-                {searchResults.length <= 0
-                    ? <div>
-                        no search data
-                    </div>
-                    : <div>
-                        {searchResults[0].id}
-                    </div>
+                <div>
+                    {searchResults.length <= 0
+                        ? <div>
+                            no search data
+                        </div>
+                        : <div>
+                            {searchResults[0].id}
+                        </div>
 
                     }
-            </div>
+                </div>
 
+
+            </div>
 
             <div>
                 <AutoSizer>

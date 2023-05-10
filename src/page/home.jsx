@@ -92,8 +92,25 @@ const leftContent = styled.div`
 const Home = () => {
     return (
         <div className="content">
-            <Link to="/travel" className = "left" style={{backgroundImage: 'url(/images/travel.jpg)'}}>여행</Link>
-            <Link to="/meeting" className = "right" style={{backgroundImage: 'url(/images/people.jpg)'}}>모임</Link>
+            <Link to="/travel" className = "left" style={{backgroundImage: 'url(/images/travel.jpg)', opacity: 0.6, display: 'flex', alignItems: 'center'}}>
+                <div style={{marginLeft: 'auto', marginRight: 'auto'}}>
+                    <h2>여행</h2>
+                    <h1 style={{fontSize:"18px", opacity: 0.8, display: 'flex', alignItems: 'center'}} >
+                        매번 여행 일정 잡기 어려웠죠?<br />
+                        단 5분만에 주요 여행지 포인트 일정을<br />
+                        추천 드려요!
+                    </h1>
+                </div>
+            </Link>
+            <Link to="/meeting" className = "right" style={{backgroundImage: 'url(/images/people.jpg)', opacity: 0.6, display: 'flex', alignItems: 'center'}}>
+                <div style={{marginLeft: 'auto', marginRight: 'auto'}}>
+                    <h2>모임</h2>
+                    <h1 style={{fontSize:"18px", opacity: 0.8, display: 'flex', alignItems: 'center'}} >
+                        혼자가는 여행은 심심하다!!<br />
+                        여행 친구와 같이 떠나는 여행 걍 가보는게 여행이죠!!!!
+                    </h1>
+                </div>
+            </Link>
         </div>
     )
 }

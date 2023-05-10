@@ -3,6 +3,7 @@ import '../css/logo.scss'
 import '../css/loginModal.scss'
 import Modal from "react-modal";
 import { Link } from 'react-router-dom';
+import Button from "../components/ui/Button";
 
 Modal.setAppElement("#root");
 
@@ -57,11 +58,20 @@ const Header = () => {
                                 <button style={{ margin: "10px 0" }}>SNS 로그인(기타2)</button>
                                 <button style={{ margin: "10px 0" }}>ID 찾기</button>
                             </div>
-
-                            <button onClick={handleCloseModal}>닫기</button>
+                            <button
+                                style={{ position: "absolute", top: 0, right: 10}}
+                                onClick={handleCloseModal}>X</button>
                         </Modal>
-                        {/*{isPopupOpen && <LoginPopup onClose={handleClosePopup} />}>*/}
                     </div>
+                    <Link to='/'>
+                        <h2>알림</h2>
+                    </Link>
+                    <Link to='/'>
+                        <h2>채팅</h2>
+                    </Link>
+                    <Link to='/'>
+                        <h2>로그아웃</h2>
+                    </Link>
                     <Link to='/myPage'>
                         <h2>마이페이지</h2>
                     </Link>
