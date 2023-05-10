@@ -92,8 +92,8 @@ const leftContent = styled.div`
 const Home = () => {
     return (
         <div className="content">
-            <Link to="/travel" className = "left">여행</Link>
-            <Link to="/meeting" className = "right">모임</Link>
+            <Link to="/travel" className = "left" style={{backgroundImage: 'url(/images/travel.jpg)'}}>여행</Link>
+            <Link to="/meeting" className = "right" style={{backgroundImage: 'url(/images/people.jpg)'}}>모임</Link>
         </div>
     )
 }

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { AutoSizer, List } from "react-virtualized";
+import SubNavbar from "../../components/SubNavbar";
+import CitySelect from "../../components/common/CitySelect";
 
 const data = [
     {
@@ -73,11 +75,10 @@ const Travel = () => {
 
     return (
         <div>
-            <input type="text" placeholder="주소(대)" />
-            <input type="text" placeholder="주소(중)" />
-            <input type="date" placeholder="시작날짜" />
-            <input type="date" placeholder="종료날짜" />
-            <input type="text" placeholder="검색키워드" />
+            <div>
+                <SubNavbar />
+            </div>
+            <CitySelect />
             <select>
                 <option value="">MBTI</option>
                 <option value="ISTJ">ISTJ</option>
